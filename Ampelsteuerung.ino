@@ -7,7 +7,6 @@ int ledPinRotA = 13;
 int ledPinGelbA = 12;
 int ledPinGruenA = 11;
 
-int tasterPinAmpel = 2;
 int tasterAmpelWert = LOW;
 
 int ledPinRotF = 7;
@@ -25,14 +24,9 @@ void setup() {
   
 }
 
-void loop() {
-
-  tasterAmpelWert = digitalRead(tasterPinAmpel);
-  if(tasterAmpelWert == HIGH)
-   ampelUmschaltung();
-  }
-
-  void ampelUmschaltung(){
+void loop() 
+  
+  {
     digitalWrite(ledPinGruenA, LOW);
     digitalWrite(ledPinGelbA, HIGH); delay(DELAY4);
     digitalWrite(ledPinGelbA, LOW);
